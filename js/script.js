@@ -13,7 +13,7 @@ function showTooltip() {
   }, 2100);
 }
 
-function clearText() {
+function clear() {
   let rawText = document.getElementById("tagalogTextArea");
   let translatedText = document.getElementById("translatedText");
   rawText.value = "";
@@ -21,7 +21,7 @@ function clearText() {
   // goBack()
 }
 
-function copyText() {
+function copy() {
   let translatedText = document.getElementById("translatedText");
   translatedText.select();
   // translatedText.
@@ -53,7 +53,7 @@ function baybayinTranslate() {
   rawText = rawText.replace(/ngi/g, "\u1705\u1712");
   rawText = rawText.replace(/ngu/g, "\u1705\u1713");
   rawText = rawText.replace(/ng/g, "\u1705\u1714");
-  // rawText = rawText.replace(/ng/g, "\u1708\u1705\u1714");
+  rawText = rawText.replace(/ng/g, "\u1708\u1705\u1714");
 
 
   rawText = rawText.replace(/ka/g, "\u1703");
@@ -362,7 +362,7 @@ function tagbanwaTranslate() {
   return rawText;
 }
 
-function convertText() {
+function translateText() {
   let translatedText = document.getElementById("translatedText");
   let languageSelected = document.getElementById("languageSelected").innerHTML;
   
@@ -394,17 +394,10 @@ function changeLanguage(language) {
       languageChoices[a].classList.toggle("selected");
     }
   }
-
-  //sets the button text to new
-  document.getElementById(
-    "languageSelected"
-  ).innerHTML = document.getElementById(language.id).innerHTML;
-  //toggles the selected class to new chosen one
+  document.getElementById("languageSelected").innerHTML = document.getElementById(language.id).innerHTML;
   document.getElementById(language.id).classList.toggle("selected");
   translatedText.className = "";
   translatedText.classList.toggle(language.id);
-  //closes the dropdown
   showDropdown();
-  //changes language on switch of language
-  convertText();
+  translateText();
 }
