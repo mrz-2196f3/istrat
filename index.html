@@ -44,19 +44,13 @@
         <div class="translator-main-blocks">
           <div class="translator-main-blocks-raw border-right border-bottom">
             <label for="tagalogTextArea">Tagalog</label>
-            <textarea
-              name="tagalog-text-area"
-              id="tagalogTextArea"
-              placeholder="Write here..."
-              onclick="focus()"
-              onkeyup="convertText()"
-            ></textarea>
-            <img id="clearButton" src="./assets/clear-svgrepo-com.svg" onclick="clearText()"></img>
+            <textarea name="tagalog-text-area" id="tagalogTextArea" placeholder="Write here..." onclick="focus()" onkeyup="translateText()"></textarea>
+            <img id="clearButton" src="./assets/clear-svgrepo-com.svg" onclick="clear()"></img>
           </div>
           <div class="translator-main-blocks-translated border-bottom">
             <label for="translatedText" id="myLabel">Baybayin (All)</label>
             <textarea name="translated-text" id="translatedText" placeholder="[!] Translation will appear here" readonly></textarea>
-            <img id="copyButton" src=".//assets/copy-svgrepo-com.svg" onclick="copyText()"></img>
+            <img id="copyButton" src=".//assets/copy-svgrepo-com.svg" onclick="copy()"></img>
           </div>
         </div>
       </div>
