@@ -13,7 +13,7 @@ function showTooltip() {
   }, 2100);
 }
 
-function clear() {
+function clearText() {
   let rawText = document.getElementById("tagalogTextArea");
   let translatedText = document.getElementById("translatedText");
   rawText.value = "";
