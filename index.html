@@ -5,26 +5,14 @@
     <script src="js/script.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Philippine Scripts Translator" />
-    <meta
-      property="og:description"
-      content="Translates tagalog words or sentences to Baybayin, Tagbanua, Hanunoo and Buhid - the ancient Filipino script."
-    />
-   
-
-    <title>Ancient Filipino Script Translator</title>
-    <meta
-      name="ISTRAT|Description"
-      content="Translates tagalog words or sentences to Baybayin, Tagbanua, Hanunoo and Buhid - the ancient Filipino script."
-    />
-    
-
+    <meta property="og:description"content="Translates tagalog words or sentences to Baybayin, Tagbanua, Hanunoo and Buhid - the ancient Filipino script."/>
+    <title> Ancient Filipino Script Translator</title>
+    <meta name="ISTRAT|Description" content="Translates tagalog words or sentences to Baybayin, Tagbanua, Hanunoo and Buhid - the ancient Filipino script."/>
   </head>
   <body>
     <div id="toast">
       <p>Translation copied</p>
     </div>
-
     <div class="flex-row">
       <div id="navigation-header" class="header">
         <h4 style="width: 100%;">Ancient Filipino script translator </h4>
@@ -34,45 +22,20 @@
       <div id="languageSwitch" class="flex-jcc switch border-bottom">
         <div class="translator-main-switch flex-jcc">
           <div class="dropdown">
-            <button
-              id="dropdownButton"
-              onclick="showDropdown()"
-              class="dropdown-button"
-            >
-             <div id="languageSelector"> <h3 id="languageSelected">
-              Baybayin
-            </h3>
+            <button id="dropdownButton" onclick="showDropdown()" class="dropdown-button">
+             <div id="languageSelector"> <h3 id="languageSelected">Baybayin</h3>
             <span class="caret-icon">
-              <svg
-                version="1.1"
-                id="Layer_1"
-                width="10"
-                height="10"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 20 20"
-                style="enable-background: new 0 0 20 20"
-                xml:space="preserve"
-              >
-                <path
-                  fill="#150f11"
-                  d="M19.5,5.7L19.5,5.7c-0.8-1.1-2.3-1.3-3.4-0.5L10,9.8L3.9,5.2C2.8,4.4,1.3,4.6,0.5,5.7l0,0C-0.3,6.8-0.1,8.3,1,9.1l7.5,5.7
-c0.5,0.3,1,0.5,1.5,0.5c0.5,0,1.1-0.1,1.5-0.5L19,9.1C20.1,8.3,20.3,6.8,19.5,5.7z"
-                />
+              <svg version="1.1" id="Layer_1" width="10" height="10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background: new 0 0 20 20" xml:space="preserve">
+                <path fill="#150f11" d="M19.5,5.7L19.5,5.7c-0.8-1.1-2.3-1.3-3.4-0.5L10,9.8L3.9,5.2C2.8,4.4,1.3,4.6,0.5,5.7l0,0C-0.3,6.8-0.1,8.3,1,9.1l7.5,5.7 c0.5,0.3,1,0.5,1.5,0.5c0.5,0,1.1-0.1,1.5-0.5L19,9.1C20.1,8.3,20.3,6.8,19.5,5.7z"/>
               </svg>
-            </span></div>
+            </span>
+        </div>
             </button>
             <div id="dropdownContents" class="dropdown-contents">
-              <a onclick="changeLanguage(this)" id="baybayin">Baybayin</a
-              >
-              <a onclick="changeLanguage(this)" id="tagbanwa">Tagbanua</a
-                >
-              <a onclick="changeLanguage(this)" id="hanunoo">Hanunoo</a
-              >
-              <a onclick="changeLanguage(this)" id="buhid">Buhid</a
-                >
+              <a onclick="changeLanguage(this)" id="baybayin">Baybayin</a>
+              <a onclick="changeLanguage(this)" id="tagbanwa">Tagbanua</a>
+              <a onclick="changeLanguage(this)" id="hanunoo">Hanunoo</a>
+              <a onclick="changeLanguage(this)" id="buhid">Buhid</a>
             </div>
           </div>
         </div>
@@ -84,29 +47,16 @@ c0.5,0.3,1,0.5,1.5,0.5c0.5,0,1.1-0.1,1.5-0.5L19,9.1C20.1,8.3,20.3,6.8,19.5,5.7z"
             <textarea
               name="tagalog-text-area"
               id="tagalogTextArea"
-              placeholder="Alon..."
+              placeholder="Write here..."
               onclick="focus()"
               onkeyup="convertText()"
             ></textarea>
-            <img
-              id="clearButton"
-              src="./assets/clear-svgrepo-com.svg"
-              onclick="clearText()">
-          </img>
+            <img id="clearButton" src="./assets/clear-svgrepo-com.svg" onclick="clearText()"></img>
           </div>
           <div class="translator-main-blocks-translated border-bottom">
             <label for="translatedText" id="myLabel">Baybayin (All)</label>
-            <textarea
-              name="translated-text"
-              id="translatedText"
-              placeholder="[!] Translation will appear here"
-              readonly
-            ></textarea>
-            <img
-              id="copyButton"
-              src=".//assets/copy-svgrepo-com.svg"
-              onclick="copyText()">
-            </img>
+            <textarea name="translated-text" id="translatedText" placeholder="[!] Translation will appear here" readonly></textarea>
+            <img id="copyButton" src=".//assets/copy-svgrepo-com.svg" onclick="copyText()"></img>
           </div>
         </div>
       </div>
