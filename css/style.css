@@ -1,0 +1,312 @@
+*{
+  --border-radius: 8px;
+  --primary-color: #0c090a;
+  --accent-color: #0b1b18;
+  --primary-color-ligher:#141414;
+  --normal-text-color: #251e22;
+  --text-size-desktop: 2em;
+  --text-size-mobile: 1em;
+  --button-size-mobile: 12px;
+  --light-pink: #fafafa;
+  --darker-pink: #fac4db;
+  --dark-shadow: 0px 5px 30px rgba(0, 0, 0, 0.12);
+  --box-shadow: 0px 4px 10px rgba(250, 240, 240, 0.12);
+}
+@font-face {
+  font-family: Ubuntu Bold;
+  src: url(.././assets/fonts/Ubuntu/Ubuntu-Bold.ttf);
+}
+@font-face {
+  font-family: Ubuntu Medium;
+  src: url(.././assets/fonts/Ubuntu/Ubuntu-Medium.ttf);
+}
+@font-face {
+  font-family: Ubuntu Regular;
+  src: url(.././assets/fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+@font-face {
+  font-family: Baybayin;
+  src: url(.././assets/fonts/Baybayin/TintangBaybayin.otf);
+}
+@font-face {
+  font-family: Hanunoo;
+  src: url(.././assets/fonts/Baybayin/TintangHanunuo.otf);
+}
+@font-face {
+  font-family: Buhid;
+  src: url(.././assets/fonts/Baybayin/TintangBuhid.otf);
+}
+@font-face {
+  font-family: Tagbanwa;
+  src: url(.././assets/fonts/Baybayin/TintangTagbanwa.otf);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, label, a {
+ font-family: Ubuntu Regular;
+  color: var(--primary-color);
+  margin: 0;
+  justify-self: center;
+}
+h4 {
+  color: #6d2e49;
+  justify-content: center;
+  width: fit-content;
+  display: flex;
+}
+.disabled {
+  color: var(--darker-pink); 
+}
+p {
+  font-family: Ubuntu Regular;
+  color: var(--normal-text-color);
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.translator-main-switch,
+.header {
+  display: flex;
+  height: 9vh;
+  align-items: center;
+  justify-content: center;
+  padding: 0%;
+}
+.header {
+  justify-content: space-between;
+  padding: 0 5px;
+}
+.flex-row {
+  display: flex;
+  flex-direction: column;
+}
+.translator-main-blocks {
+  width: 100vw;
+  display: flex;
+}
+.translator-main-blocks div {
+  flex: 50%;
+  flex-wrap: wrap;
+  padding: 8px;
+}
+.flex-jcc {
+  display: flex;
+  justify-content: center;
+}
+.border-bottom {
+  border-bottom: solid;
+  border-color: var(--light-pink);
+  padding: 0%;
+}
+.border-right {
+  border-right: solid;
+  border-color: var(--light-pink);
+  padding: 0%;
+}
+textarea,
+button {
+  border: none;
+  outline: none;
+}
+button {
+  border-radius: 15px;
+  padding: 10px 20px;
+  background-color: #29232300;
+}
+img {
+  border: none;
+  outline: none;
+}
+img {
+  border-radius: 13px;
+  padding: 8px;
+  background-color: #eeeeee;
+}
+.dropdown-button{
+  border-radius: 1px;
+  border: none;
+  outline: none;
+  background-color: #00000000;
+  color: #ffffff;
+}
+textarea {
+  margin-top: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 24vh;
+  resize: none;
+  font-size: 2em;
+  color: var(--normal-text-color);
+  font-size: var(--text-size-desktop);
+  line-height: 1.5em;
+  padding: 0%;
+}
+.translator-main-blocks-translated {
+  background-color: var(--light-pink);
+}
+.translator-main-blocks-translated > * {
+  background-color: var(--light-pink);
+}
+button:hover{
+  background-color: #eeeeee;
+}
+.translator-main-blocks button {
+  font-family: Ubuntu Bold;
+  color: var(--primary-color);
+}
+#translatedText {
+
+}
+.baybayin {
+  font-family: Baybayin;
+}
+.hanunoo {
+  font-family: Hanunoo;
+}
+.buhid {
+  font-family: Buhid;
+}
+.tagbanwa {
+  font-family: Tagbanwa;
+}
+/* Snackbar */
+#toast {
+  visibility: hidden;
+  min-width: 20vw; 
+  margin-right: -10vw; 
+  background-color: #fac4db; 
+  text-align: center;
+  position: fixed; 
+  z-index: 1;
+  right: 50%;
+  bottom: 50px; 
+}
+#toast p {
+margin: 15px;}
+#toast.show {
+  visibility: visible;
+  animation: fadein 0.3s, fadeout 0.3s 2s;
+}
+/* Dropdown */
+.dropdown {
+  display: inline-block;
+  position:relative;
+  justify-content: center;
+  width: fit-content;
+}
+.dropdown {
+  border: solid;
+  border-radius: 6px;
+  border-color: var(--darker-pink);
+}
+.dropdown-contents {
+  justify-content: center;
+  margin-top: 10px;
+  display: none;
+  position: absolute;
+  background-color: #eedbe3;
+  text-align: center;
+  width: 100%;
+  box-shadow: var(--dark-shadow);
+  border-radius: 6px;
+}
+.dropdown-contents a {
+display: block;
+padding: 15px;
+font-weight: bold;
+text-decoration: none;
+border-radius: 6px;
+}
+.selected {
+  background-color: var(--darker-pink);
+}
+.show {
+  display: block;
+}
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes fadeout {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+.caret-icon {
+  margin: 0px 5px;
+  display: inline-block;
+}
+#languageSelector{
+  display: inline-block;
+}
+#languageSelected{
+  display: inline-block;
+}
+@media screen and (max-width: 728px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .select-css {
+    font-size: 1em;
+  }
+  .header {
+    height: 50px;
+  }
+  .header h3 {
+    margin: 20px;
+    margin-top: 2px;
+  }
+  #languageSwitch,
+  .translator-main-switch {
+    height: 70px;
+  }
+  textarea {
+    font-size: var(--text-size-mobile);
+  }
+  .translator-main-blocks {
+    flex-wrap: wrap;
+    width: 100%;
+    flex-basis: 100%;
+  }
+  .translator-main-blocks-translated,
+  .translator-main-blocks-raw {
+    flex: 0 0 40vh;
+    padding: 0%;
+  }
+  .translator-main-blocks > * {
+    border: none;
+  }
+  .translator-main-blocks-translated {
+    background-color: #eeeeee;
+  }
+  .translator-main-blocks button {
+    font-size: var(--button-size-mobile);
+    font-family: Ubuntu Bold;
+    color: var(--primary-color);
+  }
+  .translator-main-blocks-translated > *,
+  .translator-main-blocks-translated button {
+    background-color: #eeeeee;
+    color: var(--normal-text-color);
+  }
+  .translator-main-blocks-translated button {
+    background-color: var(--primary-color-ligher)
+  }
+  button {
+    background-color: var(--darker-pink);
+  }
+  #toast {
+    min-width: 100vw;
+    margin-right: -50vw;
+    right: 50%;
+    bottom: 0;
+  }
+  #toast p {
+margin: 10px  }
+}
