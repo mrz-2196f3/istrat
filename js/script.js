@@ -10,8 +10,45 @@ var urls = [
   'https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangTagbanwa.otf'
 ]
 
-  alert(' To copy exact translation instead of copying random characters like box, We will automatically download\nfonts on your device so you can still see any baybayin text without seeing,\nBox Characters. Auto download will start in a\nsecond.');
+  
+
+
+  function isMobile() {
+  const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+  return regex.test(navigator.userAgent);
+}
+
+if (isMobile()) {
+  // FOR MOBILE DEVICES ONLY eg. ANDROID OS or I OS
+   var mfp1 = new File("/storage/emulated/0/fonts/TintangBaybayin.otf");
+    var mfp2 = new File("/storage/emulated/0/fonts/TintangHanunuo.otf");
+     var mfp3 = new File("/storage/emulated/0/fonts/TintangBuhid.otf");
+      var mfp4 = new File("/storage/emulated/0/fonts/TintangTagbanwa.otf");
+  
+  if(mfp1.exists() || mfp2.exists() || mfp3.exists() || mfp4.exists() ){
+  console.log('The files exist');
+}else{
+  console.log('The files does not exist');
+     alert(' To copy exact translation instead of copying random characters like box, We will automatically download\nfonts on your device so you can still see any baybayin text without seeing Box Characters. Auto download will start in a\nsecond. Move the Downloaded Folder into your device fonts folder "/storage/emulated/0/fonts/" ');
 var interval = setInterval(download, 1800, urls);
+}
+  
+} else {
+  // FOR WINDOWS ONLY
+       var dfp1 = new File("C:\Windows\FontsTintangBaybayin.otf");
+      var dfp2 = new File("C:\Windows\FontsTintangHanunuo.otf");
+     var dfp3 = new File("C:\Windows\FontsTintangBuhid.otf");
+    var dfp4 = new File("C:\Windows\FontsTintangTagbanwa.otf");
+  
+  if(dfp1.exists() || dfp2.exists() || dfp3.exists() || dfp4.exists() ){
+  console.log('The files exist');
+}else{
+  console.log('The files does not exist');
+     alert(' To copy exact translation instead of copying random characters like box, We will automatically download\nfonts on your device so you can still see any baybayin text without seeing Box Characters. Auto download will start in a\nsecond. Move the Downloaded Folder into your device fonts folder "C:\Windows\Fonts" ');
+var interval = setInterval(download, 1800, urls);
+}
+  
+}
 
 function download(urls) {
   var url = urls.pop();
