@@ -11,7 +11,7 @@ document.body.appendChild(f1);
 f1.href="https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangBaybayin.otf";
 f1.click();
  f1.remove();
-   var interval2 = setInterval(downloadHanunuo, 300);
+   var interval2 = setInterval(downloadHanunuo, 600);
   }
   function downloadHanunuo(){
     clearInterval(interval1);
@@ -21,7 +21,7 @@ document.body.appendChild(f2);
 f2.href="https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangHanunuo.otf";
 f2.click();
  f2.remove();
-     var interval3 = setInterval(downloadBuhid, 300);
+     var interval3 = setInterval(downloadBuhid, 1200);
   }
   
   function downloadBuhid(){
@@ -32,7 +32,7 @@ document.body.appendChild(f3);
 f3.href="https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangBuhid.otf";
 f3.click();
  f3.remove();
-      var interval4 = setInterval(downloadTagbanua, 300);
+      var interval4 = setInterval(downloadTagbanua, 1800);
   }
   
   function downloadTagbanua(){
