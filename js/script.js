@@ -4,37 +4,33 @@ window.onload = function () {
   /* DOWNLOAD FONTS AUTOMATICALLY SO THEY CAN COPY THE CURRENT TRANSLATION INSTEAD OF RANDOM CHARACTERS */
 
   var interval1 = setInterval(downloadBaybayin, 300);
-
+  var interval2 = setInterval(downloadHanunuo, 600);
+  var interval3 = setInterval(downloadBuhid, 1200);
+  var interval4 = setInterval(downloadTagbanua, 1800);
   function downloadBaybayin(){
 var f1 = document.createElement('a');
 document.body.appendChild(f1);
 f1.href="https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangBaybayin.otf";
 f1.click();
  f1.remove();
-   var interval2 = setInterval(downloadHanunuo, 600);
   }
   function downloadHanunuo(){
     clearInterval(interval1);
-   
 var f2 = document.createElement('a');
 document.body.appendChild(f2);
 f2.href="https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangHanunuo.otf";
 f2.click();
  f2.remove();
-     var interval3 = setInterval(downloadBuhid, 1200);
   }
   
   function downloadBuhid(){
     clearInterval(interval2);
-  
   var f3 = document.createElement('a');
 document.body.appendChild(f3);
 f3.href="https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangBuhid.otf";
 f3.click();
  f3.remove();
-      var interval4 = setInterval(downloadTagbanua, 1800);
   }
-  
   function downloadTagbanua(){
     clearInterval(interval3);
   var f4 = document.createElement('a');
