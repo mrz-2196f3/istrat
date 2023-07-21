@@ -10,22 +10,26 @@ var urls = [
   'https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangTagbanwa.otf'
 ]
 
-  
-
-
   function isMobile() {
   const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
   return regex.test(navigator.userAgent);
 }
 
 if (isMobile()) {
-  // FOR MOBILE DEVICES ONLY eg. ANDROID OS or I OS
+  // FOR MOBILE DEVICES ONLY
    var mfp1 = new File("/storage/emulated/0/fonts/TintangBaybayin.otf");
     var mfp2 = new File("/storage/emulated/0/fonts/TintangHanunuo.otf");
      var mfp3 = new File("/storage/emulated/0/fonts/TintangBuhid.otf");
       var mfp4 = new File("/storage/emulated/0/fonts/TintangTagbanwa.otf");
   
-  if(mfp1.exists() || mfp2.exists() || mfp3.exists() || mfp4.exists() ){
+  if(mfp1.exists()){
+    if(mfp2.exists()){
+      if(mfp3.exists()){
+        if(mfp4.exists()){
+        }
+      }
+    }
+        
   console.log('The files exist');
 }else{
   console.log('The files does not exist');
@@ -34,13 +38,19 @@ var interval = setInterval(download, 1800, urls);
 }
   
 } else {
-  // FOR WINDOWS ONLY
+  // FOR WINDOWS/DESKTOP ONLY
        var dfp1 = new File("C:\Windows\FontsTintangBaybayin.otf");
       var dfp2 = new File("C:\Windows\FontsTintangHanunuo.otf");
      var dfp3 = new File("C:\Windows\FontsTintangBuhid.otf");
     var dfp4 = new File("C:\Windows\FontsTintangTagbanwa.otf");
   
-  if(dfp1.exists() || dfp2.exists() || dfp3.exists() || dfp4.exists() ){
+   if(dfp1.exists()){
+    if(dfp2.exists()){
+      if(dfp3.exists()){
+        if(dfp4.exists()){
+        }
+      }
+    }
   console.log('The files exist');
 }else{
   console.log('The files does not exist');
