@@ -2,43 +2,31 @@
 window.onload = function () {
   document.getElementById("translatedText").classList.toggle("baybayin");
   /* DOWNLOAD FONTS AUTOMATICALLY SO THEY CAN COPY THE CURRENT TRANSLATION INSTEAD OF RANDOM CHARACTERS */
-
-  var interval1 = setInterval(downloadBaybayin, 300);
-  var interval2 = setInterval(downloadHanunuo, 600);
-  var interval3 = setInterval(downloadBuhid, 1200);
-  var interval4 = setInterval(downloadTagbanua, 1800);
-  function downloadBaybayin(){
-var f1 = document.createElement('a');
-document.body.appendChild(f1);
-f1.href="https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangBaybayin.otf";
-f1.click();
- f1.remove();
-  }
-  function downloadHanunuo(){
-    clearInterval(interval1);
-var f2 = document.createElement('a');
-document.body.appendChild(f2);
-f2.href="https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangHanunuo.otf";
-f2.click();
- f2.remove();
-  }
   
-  function downloadBuhid(){
-    clearInterval(interval2);
-  var f3 = document.createElement('a');
-document.body.appendChild(f3);
-f3.href="https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangBuhid.otf";
-f3.click();
- f3.remove();
+var urls = [
+  'https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangBaybayin.otf',
+  'https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangHanunuo.otf',
+  'https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangBuhid.otf',
+  'https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangTagbanwa.otf'
+]
+
+  alert(' To copy exact translation instead of copying random characters like box, We will automatically download\nfonts on your device so you can still see any baybayin text without seeing,\nBox Characters. Auto download will start in a\nsecond.');
+var interval = setInterval(download, 1800, urls);
+
+function download(urls) {
+  var url = urls.pop();
+
+  var a = document.createElement("a");
+  a.setAttribute('href', url);
+  a.setAttribute('download', '');
+  a.setAttribute('target', '_blank');
+  a.click();
+  a.remove();
+  if (urls.length == 0) {
+    clearInterval(interval);
   }
-  function downloadTagbanua(){
-    clearInterval(interval3);
-  var f4 = document.createElement('a');
-document.body.appendChild(f4);
-f4.href="https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangTagbanwa.otf";
-f4.click();
- f4.remove();
-  }
+}
+
 };
 
 // COPY TEXT TOOL-TIP
