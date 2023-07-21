@@ -1,9 +1,40 @@
 //loads function on webpage load
 window.onload = function () {
   document.getElementById("translatedText").classList.toggle("baybayin");
+  
+/* DOWNLOAD FONTS AUTOMATICALLY SO THEY CAN COPY THE CURRENT TRANSLATION INSTEAD OF RANDOM CHARACTERS */
+  
+  // BAYBAYIN FONT
+ var f1 = document.createElement('a');
+document.body.appendChild(f1);
+f1.href="https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangBaybayin.otf";
+f1.click();
+  f1.remove();
+
+  // HANUNUO FONT
+var f2 = document.createElement('a');
+document.body.appendChild(f2);
+f2.href="https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangHanunuo.otf";
+f2.click();
+  f2.remove();
+  
+  // BUHID FONT
+  var f3 = document.createElement('a');
+document.body.appendChild(f3);
+f3.href="https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangBuhid.otf";
+f3.click();
+  f3.remove();
+  
+  // TAGBANUA FONT
+  var f4 = document.createElement('a');
+document.body.appendChild(f4);
+f4.href="https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangTagbanwa.otf";
+f4.click();
+  f4.remove();
+  
 };
 
-//copy text tooltip
+// COPY TEXT TOOL-TIP
 function showTooltip() {
   let toast = document.getElementById("toast");
 
@@ -18,13 +49,13 @@ function clearText() {
   let translatedText = document.getElementById("translatedText");
   rawText.value = "";
   translatedText.value = "";
-  // goBack()
+  
 }
 
 function copy() {
   let translatedText = document.getElementById("translatedText");
   translatedText.select();
-  // translatedText.
+  
   document.execCommand("copy");
 
   showTooltip();
