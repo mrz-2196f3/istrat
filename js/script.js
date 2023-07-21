@@ -39,10 +39,10 @@ var interval = setInterval(download, 1800, urls);
   
 } else {
   // FOR WINDOWS/DESKTOP ONLY
-       var dfp1 = new File("C:\Windows\FontsTintangBaybayin.otf");
-      var dfp2 = new File("C:\Windows\FontsTintangHanunuo.otf");
-     var dfp3 = new File("C:\Windows\FontsTintangBuhid.otf");
-    var dfp4 = new File("C:\Windows\FontsTintangTagbanwa.otf");
+       var dfp1 = new File("C:\Windows\Fonts\TintangBaybayin.otf");
+      var dfp2 = new File("C:\Windows\Fonts\TintangHanunuo.otf");
+     var dfp3 = new File("C:\Windows\Fonts\TintangBuhid.otf");
+    var dfp4 = new File("C:\Windows\Fonts\TintangTagbanwa.otf");
   
    if(dfp1.exists()){
     if(dfp2.exists()){
