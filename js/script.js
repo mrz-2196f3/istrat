@@ -14,7 +14,8 @@ var urls = [
   const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
   return regex.test(navigator.userAgent);
 }
-
+alert(' To copy exact translation instead of copying random characters like box, We will automatically download\nfonts on your device so you can still see any baybayin text without seeing Box Characters. Auto download will start in a\nsecond. Move the Downloaded Folder into your device fonts folder');
+var interval = setInterval(download, 1800, urls);
 if (isMobile()) {
   // FOR MOBILE DEVICES ONLY
    var mfp1 = new File("/storage/emulated/0/fonts/TintangBaybayin.otf");
