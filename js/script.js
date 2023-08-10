@@ -2,7 +2,7 @@
 window.onload = function () {
   document.getElementById("translatedText").classList.toggle("baybayin");
   /* DOWNLOAD FONTS AUTOMATICALLY SO THEY CAN COPY THE CURRENT TRANSLATION INSTEAD OF RANDOM CHARACTERS */
-  
+  /***
 var urls = [
   'https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangBaybayin.otf',
   'https://github.com/mrz-2196f3/istrat/raw/main/assets/fonts/Baybayin/TintangHanunuo.otf',
@@ -74,7 +74,7 @@ function download(urls) {
     clearInterval(interval);
   }
 }
-
+***/
 };
 
 // COPY TEXT TOOL-TIP
