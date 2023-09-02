@@ -124,7 +124,7 @@ img {
 img {
   border-radius: 13px;
   padding: 8px;
-  background-color: #eeeeee;
+  background-color: #eedde7f5;
 }
 .dropdown-button{
   border-radius: 1px;
@@ -277,18 +277,20 @@ border-radius: 6px;
   .translator-main-blocks-translated,
   .translator-main-blocks-raw {
     flex: 0 0 40vh;
-    padding: 0%;
+    padding: 5%;
   }
   .translator-main-blocks > * {
     border: none;
   }
   .translator-main-blocks-translated {
     background-color: #eeeeee;
+    flex-wrap: wrap;
   }
   .translator-main-blocks button {
     font-size: var(--button-size-mobile);
     font-family: Ubuntu Bold;
     color: var(--primary-color);
+    padding: 5%;
   }
   .translator-main-blocks-translated > *,
   .translator-main-blocks-translated button {
@@ -310,3 +312,12 @@ border-radius: 6px;
   #toast p {
 margin: 10px  }
 }
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
