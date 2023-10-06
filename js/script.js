@@ -111,7 +111,7 @@ function focus() {
 
 function baybayinTranslate() {
   var label = document.getElementById("myLabel");
-  label.innerHTML = "Baybayin (All)";
+  label.innerHTML = "Baybayin (KATAGALUGAN)";
   let rawText = document.getElementById("tagalogTextArea").value.toLowerCase();
   rawText = rawText.replace(/e/g, "i");
   rawText = rawText.replace(/o/g, "u");
@@ -200,7 +200,7 @@ function baybayinTranslate() {
 
 function hanunooTranslate() {
   var label = document.getElementById("myLabel");
-  label.innerHTML = "Hanunoo (Mindoro)";
+  label.innerHTML = "Haninuo (MINDORO)";
   let rawText = document.getElementById("tagalogTextArea").value.toLowerCase();
   rawText = rawText.replace(/o/g, "u");
   rawText = rawText.replace(/e/g, "i");
@@ -359,7 +359,7 @@ function buhidTranslate() {
 
 function tagbanwaTranslate() {
   var label = document.getElementById("myLabel");
-  label.innerHTML = "Tagbanua (Coron, Palawan)";
+  label.innerHTML = "Tagbanwa (PALAWAN)";
   let rawText = document.getElementById("tagalogTextArea").value.toLowerCase();
   rawText = rawText.replace(/o/g, "u");
   rawText = rawText.replace(/e/g, "i");
