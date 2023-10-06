@@ -280,7 +280,7 @@ function hanunooTranslate() {
 
 function buhidTranslate() {
   var label = document.getElementById("myLabel");
-  label.innerHTML = "Buhid (Mindoro)";
+  label.innerHTML = "Buhid (MINDORO)";
   let rawText = document.getElementById("tagalogTextArea").value.toLowerCase();
   rawText = rawText.replace(/o/g, "u");
   rawText = rawText.replace(/e/g, "i");
