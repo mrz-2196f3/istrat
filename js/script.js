@@ -444,13 +444,13 @@ function translateText() {
     case "Baybayin":
       translatedText.value = baybayinTranslate();
       break;
-    case "Hanunoo":
+    case "Haninuo":
       translatedText.value = hanunooTranslate();
       break;
     case "Buhid":
       translatedText.value = buhidTranslate();
       break;
-    case "Tagbanua":
+    case "Tagbanwa":
       translatedText.value = tagbanwaTranslate();
       break;
     default:
