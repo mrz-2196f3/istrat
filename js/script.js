@@ -1,8 +1,7 @@
 //loads function on webpage load
 window.onload = function () {
   document.getElementById("translatedText").classList.toggle("baybayin");
-  var audio = document.getElementById("bgm");
-    audio.play();
+  
   /* DOWNLOAD FONTS AUTOMATICALLY SO THEY CAN COPY THE CURRENT TRANSLATION INSTEAD OF RANDOM CHARACTERS */
   /***
 var urls = [
