@@ -1,5 +1,8 @@
 # istrat
-
+### Live Link :
+```
+https://mrz-2196f3.github.io/istrat/
+```
 ```
 ENGLISH :
 ```
