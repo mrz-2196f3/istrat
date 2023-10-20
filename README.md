@@ -1,8 +1,4 @@
-# istrat
-### Live Link :
-```
-https://mrz-2196f3.github.io/istrat/
-```
+# Ancient Filipino Script TRANSLATOR - MRZ 2023
 ## DESCRIPTION
 
 ### ENGLISH :
